@@ -1,11 +1,16 @@
-FROM 3.13-bookworm
+FROM python:3.9-slim
 
 WORKDIR /app   
 
-COPY .. /app/
+COPY mini-projeto.py .
+COPY requirements.txt .
 
-RUN pip install --no-cache-dir -r requirements.txt
+
+RUN pip install --upgrade pip && pip install pyarrow && pip install --no-cache-dir -r requirements.txt
+
 
 EXPOSE 8051
 
-CMD ["streamlit","pandas","requests","pprint", "run"]
+CMD ["streamlit","pandas","requests","run"]
+
+

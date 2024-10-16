@@ -1,4 +1,5 @@
-pprint
-requests
+cmake
+pyarrow
+requests 
 streamlit
 pandas
