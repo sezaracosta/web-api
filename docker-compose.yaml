@@ -1,0 +1,8 @@
+services:
+  streamlit:
+    container_name: "web-api"
+    build:
+      dockerfile: ./dockerfile
+      context: ./
+    ports:
+      - '8501:8051'
