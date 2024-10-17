@@ -1,8 +1,8 @@
 services:
   streamlit:
-    container_name: "web-api"
+    container_name: "web-api-v3"
     build:
-      dockerfile: ./dockerfile
+      dockerfile: ./Dockerfile
       context: ./
     ports:
-      - '8501:8051'
+      - '8501:8501'
